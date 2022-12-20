@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Center, Heading, Link, Spinner, Text } from "@chakra-ui/react";
+import { Box, Button, Center, Heading, Link, Spinner, Text } from "@chakra-ui/react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase.config";
 import { signOut } from "firebase/auth";
@@ -36,7 +36,9 @@ const Home = () => {
         //     </Button>
         //   </Text>
         // </Center>
+        <Box bg='#010409'>
         <Taskpage/>
+        </Box>
       ) : (
         <Center pt="5">
           <Text>
