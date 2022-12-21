@@ -22,7 +22,6 @@ import { signOut } from "firebase/auth";
 
 
 
-
 export default function Taskpage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [user, loading, error] = useAuthState(auth);
@@ -43,7 +42,7 @@ export default function Taskpage() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+            <Box><img src='https://i.ibb.co/6bt4w1Q/logow.png' alt='TaskIt' width='30%'></img></Box>
             
           </HStack>
           <Flex alignItems={'center'}>
