@@ -19,7 +19,9 @@ import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase.config";
 import { signOut } from "firebase/auth";
-
+//the pages
+import { Taskinfo } from '../components/Taskinfo';
+import { Tasklist } from '../components/Tasklist';
 
 
 export default function Taskpage() {
@@ -85,8 +87,13 @@ export default function Taskpage() {
           </Box>
         ) : null}
       </Box>
-
-      <Box p={4}>Main Content Here</Box>
+                <br/>
+        <HStack spacing='10px' bg='transparent'>
+          <></>
+          <Box bg='#242930' w='30%' borderRadius='15px' minH='89vh'><Tasklist/></Box>
+          <Box bg='#242930' w='70%' borderRadius='15px' minH='89vh'><Taskinfo/></Box>
+          <></>
+        </HStack>
     </Box>
   );
 }
